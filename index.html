@@ -23,8 +23,8 @@
             border-left: 4px solid #2c3e50;
             padding-left: 15px;
         }
-        /* ESTILO BASE PARA DOCUMENTOS, SABÍAS QUE... E CALENDARIO */
-        .documento, .sabias-que, .calendario li {
+        /* ESTILO PARA DOCUMENTOS E SABÍAS QUE... */
+        .documento, .sabias-que {
             background: #f4f4f4;
             padding: 15px;
             margin: 15px 0;
@@ -32,7 +32,7 @@
             border-left: 4px solid #2c3e50;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .documento:hover, .sabias-que:hover, .calendario li:hover {
+        .documento:hover, .sabias-que:hover {
             transform: translateX(5px);
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
@@ -56,13 +56,17 @@
             font-size: 0.9em;
             margin-top: 5px;
         }
+        /* CALENDARIO EN BRANCO (sen fondo gris) */
         .calendario ul {
             list-style: none;
             padding-left: 0;
         }
         .calendario li {
-            list-style: none;
-            margin: 10px 0;
+            background: transparent;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: none;
+            border-bottom: 1px solid #ddd;
         }
         .btn-formulario {
             display: inline-block;
@@ -113,7 +117,7 @@
     <div class="data">Actualización: abril 2026</div>
 </div>
 
-<!-- SABÍAS QUE... (co mesmo estilo que .documento) -->
+<!-- SABÍAS QUE... (exactamente igual que .documento) -->
 <div class="sabias-que">
     <strong>📢 Sabías que...</strong><br><br>
     <strong>...como persoa traballadora, tes dereito á asistencia xurídica gratuíta?</strong><br>
