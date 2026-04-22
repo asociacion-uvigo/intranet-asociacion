@@ -23,23 +23,25 @@
             border-left: 4px solid #2c3e50;
             padding-left: 15px;
         }
-        .documento {
+        /* ESTILO BASE PARA DOCUMENTOS, SABÍAS QUE... E CALENDARIO */
+        .documento, .sabias-que, .calendario li {
             background: #f4f4f4;
             padding: 15px;
             margin: 15px 0;
             border-radius: 8px;
             border-left: 4px solid #2c3e50;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .documento:hover {
+        .documento:hover, .sabias-que:hover, .calendario li:hover {
             transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .documento a {
+        .documento a, .sabias-que a {
             color: #2980b9;
             text-decoration: none;
             font-weight: bold;
         }
-        .documento a:hover {
+        .documento a:hover, .sabias-que a:hover {
             text-decoration: underline;
         }
         .aviso {
@@ -59,25 +61,8 @@
             padding-left: 0;
         }
         .calendario li {
-            background: #f4f4f4;
+            list-style: none;
             margin: 10px 0;
-            padding: 12px;
-            border-radius: 8px;
-            border-left: 4px solid #2c3e50;
-        }
-        /* ESTILO UNIFICADO PARA "SABÍAS QUE..." */
-        .sabias-que {
-            background: #f4f4f4;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #2c3e50;
-        }
-        .sabias-que p {
-            margin: 10px 0;
-        }
-        .sabias-que strong {
-            color: #2c3e50;
         }
         .btn-formulario {
             display: inline-block;
@@ -128,7 +113,7 @@
     <div class="data">Actualización: abril 2026</div>
 </div>
 
-<!-- SABÍAS QUE... (homoxeneizado co mesmo estilo que .documento) -->
+<!-- SABÍAS QUE... (co mesmo estilo que .documento) -->
 <div class="sabias-que">
     <strong>📢 Sabías que...</strong><br><br>
     <strong>...como persoa traballadora, tes dereito á asistencia xurídica gratuíta?</strong><br>
