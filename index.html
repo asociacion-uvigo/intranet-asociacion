@@ -17,22 +17,33 @@
             border-bottom: 3px solid #2c3e50;
             padding-bottom: 10px;
         }
+        /* TÍTULOS SEN BORDE ESQUERDO, SEN FONDO, SEN SOMBRA */
         h2 {
             color: #34495e;
             margin-top: 30px;
+            padding-left: 0;
+            border-left: none;
+            background: none;
         }
-        .documento {
+        /* ESTILO PARA DOCUMENTOS E BLOCOS DE "SABÍAS QUE..." */
+        .documento, .bloque-sabias {
             background: #f4f4f4;
             padding: 15px;
             margin: 15px 0;
             border-radius: 8px;
             border-left: 4px solid #2c3e50;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .documento a {
+        .documento:hover, .bloque-sabias:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .documento a, .bloque-sabias a {
             color: #2980b9;
             text-decoration: none;
+            font-weight: bold;
         }
-        .documento a:hover {
+        .documento a:hover, .bloque-sabias a:hover {
             text-decoration: underline;
         }
         .aviso {
@@ -40,72 +51,146 @@
             padding: 10px;
             border-radius: 5px;
             margin: 20px 0;
+            border-left: 4px solid #2980b9;
+        }
+        .data {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        /* CALENDARIO SEN BORDE, SEN FONDO, SEN SOMBRA */
+        .calendario ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .calendario li {
+            background: transparent;
+            padding: 8px 0;
+            margin: 0;
+            border-left: none;
+            border-bottom: 1px solid #eee;
+        }
+        .btn-formulario {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px 5px 0 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .btn-formulario:hover {
+            background: #1a4d8c;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.8em;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
-    <h1>📚 Intranet da Asociación de Profesores Asociados</h1>
-    <p><strong>Benvida/o, socio/a.</strong> Este é o espazo privado da asociación.</p>
-    
-    <div class="aviso">
-        <strong>🔐 Acceso restrinxido:</strong> Esta páxina é só para membros da Asociación.
+
+<h1>📚 Intranet da Asociación de Profesores Asociados</h1>
+<p><strong>Benvida/o, socio/a.</strong> Este é o espazo privado da asociación.</p>
+
+<div class="aviso">
+    <strong>🔐 Acceso restrinxido:</strong> Esta páxina é só para membros da Asociación.
+</div>
+
+<h2>📄 Documentos internos</h2>
+
+<div class="documento">
+    <strong>📑 1. Proposta de estabilización LOU → LOSU</strong><br>
+    Normativa reguladora do proceso de estabilización do profesorado asociado (concurso de méritos con valoración preferente da experiencia docente).<br>
+    <a href="https://github.com/asociacion-uvigo/intranet-asociacion/blob/bb9c9d71744c843784b8eb1dcb0d3ed0a7a5bb0d/Proposta_%20Estabilizacion_LOU_LOSU.pdf">📎 Descargar PDF</a>
+    <div class="data">Actualización: abril 2026</div>
+</div>
+
+<div class="documento">
+    <strong>👨‍🏫 2. Proposta de promoción interna a PPL</strong><br>
+    Procedemento para a promoción interna de profesorado asociado doutor a profesorado permanente laboral (contratado doutor / permanente laboral).<br>
+    <a href="https://github.com/asociacion-uvigo/intranet-asociacion/blob/5c4bd9477b758ca2c458a992b00dcc84ef8f3589/Proposta_Promocion_Interna_PPL.pdf">📎 Descargar PDF</a>
+    <div class="data">Actualización: abril 2026</div>
+</div>
+
+<h2>📢 Sabías que...</h2>
+
+<!-- BLOQUE 1: Dereito á asistencia xurídica gratuíta -->
+<div class="bloque-sabias">
+    <strong>...como persoa traballadora, tes dereito á asistencia xurídica gratuíta?</strong><br>
+    Este dereito permite que, aínda que non dispoñas de recursos económicos suficientes, poidas acceder a un avogado ou avogada e a un procurador ou procuradora sen custo, para defender os teus dereitos ante os tribunais.
+</div>
+
+<!-- BLOQUE 2: Base legal -->
+<div class="bloque-sabias">
+    <strong>⚖️ Base legal</strong><br>
+    Lei 1/1996, do 10 de xaneiro, de asistencia xurídica gratuíta, e Decreto 269/2008, do 6 de novembro, polo que se aproba o Regulamento de asistencia xurídica gratuíta de Galicia.
+</div>
+
+<!-- BLOQUE 3: Onde se solicita -->
+<div class="bloque-sabias">
+    <strong>📌 Onde se solicita?</strong><br>
+    No <strong>Colexio de Avogados e Avogadas</strong> do lugar onde estea o xulgado que vai coñecer do teu caso, ou no xulgado do teu domicilio.
+</div>
+
+<!-- BLOQUE 4: Datos necesarios -->
+<div class="bloque-sabias">
+    <strong>📄 Que datos hai que dar?</strong><br>
+    Datos persoais, situación económica e familiar, a pretensión que queres facer valer e, se hai, a parte contraria.
+</div>
+
+<!-- BLOQUE 5: Documentación necesaria -->
+<div class="bloque-sabias">
+    <strong>📎 Documentación necesaria</strong><br>
+    Declaracións da renda, vida laboral, etc.
+</div>
+
+<!-- BLOQUE 6: Prazo para emendar erros -->
+<div class="bloque-sabias">
+    <strong>⏳ Prazo para emendar erros</strong><br>
+    Se falta documentación, o Colexio darache <strong>10 días hábiles</strong> para emendalo. Se non, arquivarase a solicitude.
+</div>
+
+<!-- BLOQUE 7: Efectos da resolución -->
+<div class="bloque-sabias">
+    <strong>✅ Se che conceden:</strong> Confírmase a designación de avogado/a e procurador/a.<br>
+    <strong>❌ Se che denegan:</strong> As designacións provisionais quedan sen efecto.
+</div>
+
+<!-- BLOQUE 8: Formularios -->
+<div class="bloque-sabias">
+    <strong>📄 Formularios</strong><br>
+    <div style="margin-top: 5px;">
+        <a href="URL_RAW_FORMULARIO_1" target="_blank" class="btn-formulario">📄 Solicitude de xustiza gratuíta</a>
+        <a href="URL_RAW_FORMULARIO_2" target="_blank" class="btn-formulario">📄 Anexo situación familiar</a>
+        <a href="URL_RAW_FORMULARIO_3" target="_blank" class="btn-formulario">📄 Declaración parella de feito</a>
     </div>
-    
-    <h2>📄 Documentos internos</h2>
- <div class="documento">
-        <strong>📑 1. Proposta de estabilización LOU → LOSU</strong><br>
-        Normativa reguladora do proceso de estabilización do profesorado asociado (concurso de méritos con valoración preferente da experiencia docente).<br>
-        <a href="https://github.com/asociacion-uvigo/intranet-asociacion/blob/bb9c9d71744c843784b8eb1dcb0d3ed0a7a5bb0d/Proposta_%20Estabilizacion_LOU_LOSU.pdf">[📎 Descargar PDF]</a>
-        <div class="data">Actualización: abril 2026</div>
-    </div>
-    
-    <div class="documento">
-        <strong>👨‍🏫 2. Proposta de promoción interna a PPL</strong><br>
-        Procedemento para a promoción interna de profesorado asociado doutor a profesorado permanente laboral (contratado doutor / permanente laboral).<br>
-        <a href="https://github.com/asociacion-uvigo/intranet-asociacion/blob/5c4bd9477b758ca2c458a992b00dcc84ef8f3589/Proposta_Promocion_Interna_PPL.pdf">[📎 Descargar PDF]</a>
-        <div class="data">Actualización: abril 2026</div>
-    </div>
-    
-    <h2>📅 Calendario</h2>
+    <div class="data" style="margin-top: 10px;">*Se tes dúbidas, contacta co Colexio de Avogados do teu domicilio ou coa asociación.</div>
+</div>
+
+<h2>📅 Calendario</h2>
+<div class="calendario">
     <ul>
-        <li><strong>12 de marzo de 2026</strong> - Reunión con Jacobo Porteiro Fresco na Escola de Enseñería Industrial (11:30h a 12:30h.)</li>
-        <li><strong>12 de marzo de 2026</strong> - Reunión con Belén Rubio Armesto na Escola de Ciencias da Comunicación (19:15h a 20:30h.) </li>
-        <li><strong>17 de marzo de 2026</strong> - Reunión con Carmen García Mateo na Escola de Enxeñaría Industrial (11:15 a 12:00) (</li>
+        <li><strong>12 de marzo de 2026</strong> - Reunión con Jacobo Porteiro Fresco na Escola de Enxeñaría Industrial (11:30h a 12:30h.)</li>
+        <li><strong>12 de marzo de 2026</strong> - Reunión con Belén Rubio Armesto na Escola de Ciencias da Comunicación (19:15h a 20:30h.)</li>
+        <li><strong>17 de marzo de 2026</strong> - Reunión con Carmen García Mateo na Escola de Enxeñaría Industrial (11:15h a 12:00h)</li>
         <li><strong>6 de maio de 2026</strong> - Votacións reitoría</li>
     </ul>
-    
-<!-- SABÍAS QUE... -->
-<div class="seccion" id="sabias-que">
-    <h2>📢 Sabías que...</h2>
-    <div class="foto" style="text-align: left; padding: 1.5rem;">
-        <p style="font-size: 1.2rem; font-weight: bold; color: #1a4d8c;">...como persoa traballadora, tes dereito á asistencia xurídica gratuíta?</p>
-        <p>Este dereito permite que, aínda que non dispoñas de recursos económicos suficientes, poidas acceder a un avogado ou avogada e a un procurador ou procuradora sen custo, para defender os teus dereitos ante os tribunais.</p>
-        
-        <p><strong>⚖️ Base legal:</strong> Lei 1/1996 e Decreto 269/2008 (Regulamento de asistencia xurídica gratuíta de Galicia).</p>
-        
-        <p><strong>📌 Onde se solicita?</strong> No <strong>Colexio de Avogados e Avogadas</strong> do lugar onde estea o xulgado que vai coñecer do teu caso, ou no xulgado do teu domicilio.</p>
-        
-        <p><strong>📄 Que datos hai que dar?</strong> Datos persoais, situación económica e familiar, a pretensión que queres facer valer e, se hai, a parte contraria.</p>
-        
-        <p><strong>📎 Documentación necesaria:</strong> Declaracións da renda, vida laboral, etc.</p>
-        
-        <p><strong>⏳ Prazo para emendar erros:</strong> Se falta documentación, o Colexio darache <strong>10 días hábiles</strong> para emendalo. Se non, arquivarase a solicitude.</p>
-        
-        <p><strong>✅ Se che conceden:</strong> Confírmase a designación de avogado/a e procurador/a.<br>
-        <strong>❌ Se che denegan:</strong> As designacións provisionais quedan sen efecto.</p>
-        
-        <p><strong>📄 Formularios:</strong></p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
-            <a href="URL_RAW_FORMULARIO_1" target="_blank" class="btn-descarga" style="background: #1a4d8c;">📄 Solicitude de xustiza gratuíta</a>
-            <a href="URL_RAW_FORMULARIO_2" target="_blank" class="btn-descarga" style="background: #1a4d8c;">📄 Anexo situación familiar</a>
-            <a href="URL_RAW_FORMULARIO_3" target="_blank" class="btn-descarga" style="background: #1a4d8c;">📄 Declaración parella de feito</a>
-        </div>
-        <p style="font-size: 0.8rem; margin-top: 1rem;">*Se tes dúbidas, contacta co Colexio de Avogados do teu domicilio ou coa asociación.</p>
-    </div>
 </div>
-    
-    <h2>📧 Contacto</h2>
-    <p>Asociación de Profesores Asociados da UVigo<br>
-    Correo: <a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+
+<h2>📧 Contacto</h2>
+<p>Asociación de Profesores Asociados da UVigo<br>
+Correo: <a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+
+<footer>
+    Asociación de Profesores Asociados da Universidade de Vigo
+</footer>
+
 </body>
 </html>
