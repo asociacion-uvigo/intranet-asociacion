@@ -17,14 +17,15 @@
             border-bottom: 3px solid #2c3e50;
             padding-bottom: 10px;
         }
+        /* TÍTULOS SEN BORDE ESQUERDO */
         h2 {
             color: #34495e;
             margin-top: 30px;
-            border-left: 4px solid #2c3e50;
-            padding-left: 15px;
+            padding-left: 0;
+            border-left: none;
         }
-        /* ESTILO PARA DOCUMENTOS E SABÍAS QUE... */
-        .documento, .sabias-que {
+        /* ESTILO PARA DOCUMENTOS E CONTIDO DE "SABÍAS QUE..." */
+        .documento, .sabias-contenido {
             background: #f4f4f4;
             padding: 15px;
             margin: 15px 0;
@@ -32,16 +33,16 @@
             border-left: 4px solid #2c3e50;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .documento:hover, .sabias-que:hover {
+        .documento:hover, .sabias-contenido:hover {
             transform: translateX(5px);
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .documento a, .sabias-que a {
+        .documento a, .sabias-contenido a {
             color: #2980b9;
             text-decoration: none;
             font-weight: bold;
         }
-        .documento a:hover, .sabias-que a:hover {
+        .documento a:hover, .sabias-contenido a:hover {
             text-decoration: underline;
         }
         .aviso {
@@ -56,17 +57,17 @@
             font-size: 0.9em;
             margin-top: 5px;
         }
-        /* CALENDARIO EN BRANCO (sen fondo gris) */
+        /* CALENDARIO SEN BORDE, SEN FONDO, SEN SOMBRA */
         .calendario ul {
             list-style: none;
             padding-left: 0;
         }
         .calendario li {
             background: transparent;
-            padding: 10px 0;
-            margin: 5px 0;
+            padding: 8px 0;
+            margin: 0;
             border-left: none;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
         }
         .btn-formulario {
             display: inline-block;
@@ -117,9 +118,10 @@
     <div class="data">Actualización: abril 2026</div>
 </div>
 
-<!-- SABÍAS QUE... (exactamente igual que .documento) -->
-<div class="sabias-que">
-    <strong>📢 Sabías que...</strong><br><br>
+<h2>📢 Sabías que...</h2>
+
+<!-- CONTIDO DE SABÍAS QUE... (con borde, fondo, sombra e efecto hover) -->
+<div class="sabias-contenido">
     <strong>...como persoa traballadora, tes dereito á asistencia xurídica gratuíta?</strong><br>
     Este dereito permite que, aínda que non dispoñas de recursos económicos suficientes, poidas acceder a un avogado ou avogada e a un procurador ou procuradora sen custo, para defender os teus dereitos ante os tribunais.<br><br>
     
