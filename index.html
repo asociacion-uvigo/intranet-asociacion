@@ -33,6 +33,9 @@
             border-radius: 8px;
             border-left: 4px solid #2c3e50;
             transition: transform 0.2s, box-shadow 0.2s;
+            overflow: visible; /* Asegura que non corta o contido */
+            max-height: none;  /* Elimina calquera límite de altura */
+            height: auto;      /* Altura automática segundo o contido */
         }
         .documento:hover, .bloque-sabias:hover {
             transform: translateX(5px);
